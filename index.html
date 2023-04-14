@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template With JS</title>
+    <link rel="icon" href="imgs/5968238.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- My Frame Work File -->
+    <link rel="stylesheet" href="css/framework.css">
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Main Js File -->
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <!-- Start Setting-box -->
+    <div class="setting-box bg-white p-fixed">
+        <div class="p-absolute c-white p-10 txt-c gear-p between-flex">
+            <i class="fa-solid fa-gear gear-c "></i>
+        </div>
+        <div class="setting-container ">
+            <div class="color-list center-flex f-wrap bg-eee pb-20 mb-20">
+                <h3 class="mb-10 w-full txt-c  mt-10">Colors</h3>
+                <ul class="colors between-flex p-0 m-0">
+                    <li class= "mr-10 active"data-color="#FF9800"></li>
+                    <li class= "mr-10"data-color="#E91E63"></li>
+                    <li class= "mr-10"data-color="#009688"></li>
+                    <li class= "mr-10"data-color="#03A9F4"></li>
+                    <li class= "mr-10"data-color="#4CAF50"></li>
+                </ul>
+            </div>
+            <div class="bg-option-box center-flex f-wrap pb-20">
+                <h3 class="mb-10 w-full txt-c  mt-10">Random Backgrond</h3>
+                <label>
+                    <input class="bg-checkbox" type="checkbox" >
+                    <div class="p-relative bg-toggle-switch"></div>
+                </label>
+            </div>
+            <div class="bg-option-box center-flex f-wrap pb-20">
+                <h3 class="mb-10 w-full txt-c mt-10">Nav Bullets</h3>
+                <label>
+                    <input class="nav-checkbox" type="checkbox" >
+                    <div class="p-relative nav-toggle-switch"></div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- End Setting-box -->
+    <!-- End Nav Bullets -->
+    <div class="nav-bullets">
+        <div class="bullet p-relative" data-section=".about-us-page">
+            <div class="tool-tip">About Us</div>
+        </div>
+        <div class="bullet p-relative" data-section=".skills-section">
+            <div class="tool-tip">Our Skills</div>
+        </div>
+        <div class="bullet p-relative"  data-section=".gallery-section">
+            <div class="tool-tip">Gallery</div>
+        </div>
+        <div class="bullet p-relative" data-section=".time-line">
+            <div class="tool-tip">Time line</div>
+        </div>
+        <div class="bullet p-relative" data-section=".features">
+            <div class="tool-tip">Our Features</div>
+        </div>
+        <div class="bullet p-relative" data-section=".Testimonials">
+            <div class="tool-tip">Testimonials</div>
+        </div>
+    </div>
+    <!-- End Nav Bullets -->
+    <!-- Start Landing Page -->
+    <div class="landing-page p-relative" id="landing">
+        <div class="overlay p-absolute"></div>
+        <div class="container ">
+            <div class="head-area p-relative c-white between-flex p-10">
+                <div class="logo p-15 fw-bold"><span class="main-title c-main">JavaScript</span> Template</div>
+                <ul class="links  d-flex">
+                    <li><a class="c-white p-15 active" href="#" data-section=".about-us-page">About</a></li>
+                    <li><a class="c-white p-15" href="#" data-section=".skills-section">Skills</a></li>
+                    <li><a class="c-white p-15" href="#" data-section=".gallery-section">Gallery</a></li>
+                    <li><a class="c-white p-15" href="#" data-section=".time-line">Timeline</a></li>
+                    <li><a class="c-white p-15" href="#" data-section=".features">Features</a></li>
+                    <li><a class="c-white p-15" href="#" data-section=".Testimonials">Testimonials</a></li>
+                </ul>
+                <i class="fa-solid fa-bars bars"></i>
+            </div>
+            <div class="introduction-text txt-c p-absolute c-white w-fit">
+                <h1 class="m-0 mb-15">We Are A <span class="c-main fw-bold">Travel</span> Agency</h1>
+                <p class="l-height m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet ipsam beatae laboriosam, similique repudiandae minima!</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Landing Page -->
+    <!-- Start About Us  -->
+    <div class="about-us-page">
+        <div class="container between-flex pt-20 pb-20">
+            <div class="about-us-info txt-c-mobile p-10">
+                <h1 class="m-0 mb-20 c-main">About Us</h1>
+                <p class="m-0 l-height">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid veniam et excepturi in culpa magni amet harum dolores ipsam, tempore similique optio? Quo exercitationem consectetur voluptatibus iste magni nesciunt voluptatum!</p>
+            </div>
+            <div class="about-us-image hide-mobile">
+                <img class="w-full"src="imgs/about-us.avif" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End About Us  -->
+    <!-- Start Skills -->
+    <div class="skills-section bg-eee ">
+        <div class="container between-flex txt-c-mobile">
+                <ul class="skills m-0 p-0">
+                    <h3 class="mt-0 mb-5">HTML</h3>
+                    <li class=" p-relative mb-10">
+                        <span data-progress="90%"></span>
+                    </li>
+                    <h3 class="mt-0 mb-10">CSS</h3>
+                    <li class="p-relative mb-10">
+                        <span data-progress="80%"></span>
+                    </li>
+                    <h3 class="mt-0 mb-10">Python</h3>
+                    <li class="p-relative mb-10">
+                        <span data-progress="50%"></span>
+                    </li>
+                    <h3 class="mt-0 mb-10">JavaScript</h3>
+                    <li class="p-relative mb-10">
+                        <span data-progress="60%"></span>
+                    </li>
+                    <h3 class="mt-0 mb-10">PHP</h3>
+                    <li class="p-relative mb-10">
+                        <span data-progress="10%"></span>
+                    </li>
+                </ul>
+            <div class="skills-content">
+                <h1 class="m-0 mb-20 c-main">Our Skills</h1>
+                <p class="m-0 l-height">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus fuga adipisci laudantium itaque, libero aliquam cum magni similique minima, nesciunt velit hic dolorem odit voluptatibus repellendus ratione quod, voluptatem ab?</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Skills -->
+    <!-- Start Gallery -->
+    <div class="gallery-section">
+        <div class="container p-relative">
+            <i class="fa-solid fa-chevron-right p-absolute right"></i>
+            <div class="imgs d-grid gap-40">
+                
+                <img class="gallery-effect" src="imgs/gallery01 (1).jpg" alt="">
+                <img src="imgs/gallery01 (2).jpg" alt="">
+                <img src="imgs/gallery01 (3).jpg" alt="">
+                <img src="imgs/gallery01 (4).jpg" alt="">
+                <img src="imgs/gallery01 (5).jpg" alt="">
+                <img src="imgs/gallery01 (6).jpg" alt="">
+                <img src="imgs/gallery01 (7).jpg" alt="">
+                <img src="imgs/gallery01 (8).jpg" alt="">
+                <img src="imgs/gallery01 (9).jpg" alt="">
+                <img src="imgs/gallery01 (7).jpg" alt="">
+            </div>
+            <i class="fa-solid fa-chevron-left p-absolute left"></i>
+        </div>
+    </div>
+    <!-- End Gallery -->
+    <!-- Start Time Line -->
+    <div class="time-line">
+        <div class="container">
+            <div class="time-line-content">
+                <div class="year">2022</div>
+                <div class="left-cover">
+                    <div class="left rad-10">
+                        <h3 class="m-0 c-main mt-5">Testing Heading</h3>
+                        <p class="c-gray l-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum inventore obcaecati rem corrupti, nisi ab, magnam similique fugit at et porro! Adipisci, tempora!</p>
+                    </div>
+                </div>
+                <div class="right-cover">
+                    <div class="right rad-10">
+                        <h3 class="m-0 c-main">Testing Heading</h3>
+                        <p class="c-gray l-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum inventore obcaecati rem corrupti, nisi ab, magnam similique fugit at et porro! Adipisci, tempora!</p>
+                    </div>
+                </div>
+                <div class="year">2021</div>
+                <div class="left-cover">
+                    <div class="left rad-10">
+                        <h3 class="m-0 c-main mt-5">Testing Heading</h3>
+                        <p class="c-gray l-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum inventore obcaecati rem corrupti, nisi ab, magnam similique fugit at et porro! Adipisci, tempora!</p>
+                    </div>
+                </div>
+                <div class="left-cover">
+                    <div class="left rad-10">
+                        <h3 class="m-0 c-main">Testing Heading</h3>
+                        <p class="c-gray l-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum inventore obcaecati rem corrupti, nisi ab, magnam similique fugit at et porro! Adipisci, tempora!</p>
+                    </div>
+                </div>
+                <div class="year">2020</div>
+                <div class="right-cover">
+                    <div class="right rad-10">
+                        <h3 class="m-0 c-main mt-5">Testing Heading</h3>
+                        <p class="c-gray l-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum inventore obcaecati rem corrupti, nisi ab, magnam similique fugit at et porro! Adipisci, tempora!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Time Line -->
+    <!-- Start Features -->
+    <div class="features">
+        <div class="container txt-c pt-50 pb-50 ">
+            <h2 class="mb-35 c-main">Our Features</h2>
+            <div class="features-content d-grid g-300 gap-20">
+                <div class="feat-box">
+                    <img class="bg-eee p-5 p-relative img-small" src="imgs/feature03.png" alt="camera">
+                    <h4 class="p-relative mb-20 pb-15">Development</h4>
+                    <p class="l-height">We Are professional marketeers, we will do anything you imagine in no time</p>
+                </div>
+                <div class="feat-box">
+                    <img class="bg-eee p-5 p-relative img-small" src="imgs/feature03.png" alt="camera">
+                    <h4 class="p-relative mb-20 pb-15">Development</h4>
+                    <p class="l-height">We Are professional marketeers, we will do anything you imagine in no time</p>
+                </div>
+                <div class="feat-box">
+                    <img class="bg-eee p-5 p-relative img-small" src="imgs/feature03.png" alt="camera">
+                    <h4 class="p-relative mb-20 pb-15">Development</h4>
+                    <p class="l-height">We Are professional marketeers, we will do anything you imagine in no time</p>
+                </div>
+                <div class="feat-box">
+                    <img class="bg-eee p-5 p-relative img-small" src="imgs/feature03.png" alt="camera">
+                    <h4 class="p-relative mb-20 pb-15">Development</h4>
+                    <p class="l-height">We Are professional marketeers, we will do anything you imagine in no time</p>
+                </div>
+                <div class="feat-box">
+                    <img class="bg-eee p-5 p-relative img-small" src="imgs/feature03.png" alt="camera">
+                    <h4 class="p-relative mb-20 pb-15">Development</h4>
+                    <p class="l-height">We Are professional marketeers, we will do anything you imagine in no time</p>
+                </div>
+                <div class="feat-box">
+                    <img class="bg-eee p-5 p-relative img-small"  src="imgs/feature03.png" alt="camera">
+                    <h4 class="p-relative mb-20 pb-15">Development</h4>
+                    <p class="l-height">We Are professional marketeers, we will do anything you imagine in no time</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Features -->
+    <!-- Start Testimonials -->
+    <div class="Testimonials p-relative pt-50 pb-50">
+        <div class="container p-relative">
+            <h2 class="mb-35 c-white txt-c-mobile">Testimonials</h2>
+            <div class="testi-content d-grid g-300 gap-20">
+                <div class="testi-box bg-white p-20">
+                    <p class="m-0 mb-20 l-height">I am ver happywithproduct its amazing and recive it ver fast and the price was amazing</p>
+                    <div class="d-flex">
+                        <img src="imgs/gallery01 (6).jpg " alt="">
+                        <div class="ml-10 align-content">
+                            <h4  class="m-0 w-full-mobile">Saad Ahmed</h4>
+                            <p class="m-0">CEO At Company</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-box bg-white p-20">
+                    <p class="m-0 mb-20 l-height">I am ver happywithproduct its amazing and recive it ver fast and the price was amazing</p>
+                    <div class="d-flex">
+                        <img src="imgs/gallery01 (6).jpg " alt="">
+                        <div class="ml-10 align-content">
+                            <h4 class="m-0 w-full-mobile">Saad Ahmed</h4>
+                            <p class="m-0">CEO At Company</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-box bg-white p-20">
+                    <p class="m-0 mb-20 l-height">I am ver happywithproduct its amazing and recive it ver fast and the price was amazing</p>
+                    <div class="d-flex">
+                        <img src="imgs/gallery01 (6).jpg " alt="">
+                        <div class="ml-10 align-content">
+                            <h4 class="m-0 w-full-mobile">Saad Ahmed</h4>
+                            <p class="m-0">CEO At Company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials -->
+</body>
+</html>
