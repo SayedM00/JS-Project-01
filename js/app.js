@@ -21,14 +21,13 @@ if (localStorage.getItem("color_option") !== null) {
             colors.forEach((ele) => {
                 ele.classList.remove("active")
             });
-            colors[i].classList.add("active")
+            colors[i].classList.add("active") 
         }
     }
 }
-if (localStorage.getItem("image_number") != null) {
-    // Save The Choosen Image
-    document.getElementById("landing").style.backgroundImage = `url('../imgs/landing-page\ ${localStorage.getItem("image_number")}')`
-}
+
+// Save The Choosen Image
+localStorage.getItem("image_number") != null ? document.getElementById("landing").style.backgroundImage = `url('../imgs/landing-page\ ${localStorage.getItem("image_number")}')` : ""
 
 // Setting Box And Gear
 document.querySelector(".gear-p").onclick = ()=> {
@@ -36,25 +35,31 @@ document.querySelector(".gear-p").onclick = ()=> {
     document.querySelector(".gear-c").classList.toggle("fa-spin")
 
 }
+
 // Control Colors
 colors.forEach((ele) => {
     ele.onclick = function() {
-        // Remove Active Class From All Colors
-        colors.forEach((ele) => {
-            ele.classList.remove("active")
-        })
-        // Add Active Class On The Choosen Color
-        this.classList.add("active")
+
+        activeClass(colors, ele)
         // Change Main Color's Body Style
         body_style.setProperty("--main--color", this.dataset.color)
         // Save The Choosen Color in Local Storage
         localStorage.setItem("color_option", this.dataset.color)
     }
 })
+
 // Links Switch 
 document.querySelector(".bars").addEventListener(("click"), () => {
     document.querySelector(".links").classList.toggle("links-open")
 })
+
+// Links Active Class 
+links.forEach((ele) => {
+    ele.onclick = function () {
+        activeClass(links, ele)
+    }
+})
+
 // Check Background Switch's value
 if (localStorage.getItem("backgroundSwitch") != null) {
     if (localStorage.getItem("backgroundSwitch") == "true") {
@@ -62,6 +67,7 @@ if (localStorage.getItem("backgroundSwitch") != null) {
         switchBg()
     }
 }
+
 // Landing Page Switch 
 document.querySelector(".bg-toggle-switch").onclick = function () {
     if (bg_checkbox.checked == true) {
@@ -72,6 +78,7 @@ document.querySelector(".bg-toggle-switch").onclick = function () {
         switchBg()
     }
 }
+
 // Switch Function
 function switchBg() {
     let number; 
@@ -81,6 +88,8 @@ function switchBg() {
             localStorage.setItem("image_number", number)
         }, 5000);
     }
+
+// Nav Bullents Switch
 if (localStorage.getItem("navSwitch") != null) {
     if (localStorage.getItem("navSwitch") === 'true') {
         document.querySelector(".nav-bullets").style.display = "block";
@@ -89,7 +98,8 @@ if (localStorage.getItem("navSwitch") != null) {
         document.querySelector(".nav-bullets").style.display = "none"
     }
 }
-// Nav Bullents Switch 
+
+// Nav Bullents Switch
 document.querySelector(".nav-toggle-switch").onclick = function () {
     if (nav_checkbox.checked == true) {
         localStorage.setItem("navSwitch", "false")
@@ -99,6 +109,7 @@ document.querySelector(".nav-toggle-switch").onclick = function () {
         document.querySelector(".nav-bullets").style.display = "block";
     }
 }
+
 // Skills Progress
 window.onscroll = () => {
     let skillsOfSet = skillsBox.offsetTop;
@@ -144,6 +155,14 @@ leftClick.onclick = function() {
     }
 }
 
+// Function Rmove & Add Active Class
+function activeClass(elements, element) {
+    elements.forEach((element) => {
+        element.classList.remove("active")
+    })
+    element.classList.add("active")
+}
+// Function Scroll To Element
 function windowScroll(elements) {
     elements.forEach((ele) => {
         ele.addEventListener("click", function(e) {
