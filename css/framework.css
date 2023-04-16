@@ -17,6 +17,9 @@
 .align-center {
   align-items: center;
 }
+.justify-center {
+  justify-content: center;
+}
 .space-between {
   justify-content: space-between;
 }
@@ -224,6 +227,9 @@
 }
 .fs-25 {
   font-size: 25px;
+}
+.fs-2em {
+  font-size: 2em;
 }
 .fw-bold {
   font-weight: bold;
