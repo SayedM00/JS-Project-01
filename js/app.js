@@ -90,7 +90,7 @@ function switchBg() {
     }
 
 // Nav Bullents Switch
-if (localStorage.getItem("navSwitch") != null) {
+if (localStorage.getItem("navSwitch") !== null ||  localStorage.getItem("navSwitch") === null) {
     if (localStorage.getItem("navSwitch") === 'true') {
         document.querySelector(".nav-bullets").style.display = "block";
         nav_checkbox.click()
@@ -108,6 +108,12 @@ document.querySelector(".nav-toggle-switch").onclick = function () {
         localStorage.setItem("navSwitch", "true")
         document.querySelector(".nav-bullets").style.display = "block";
     }
+}
+
+// Reset Option 
+document.querySelector(".reset-button").onclick = () => {
+    window.localStorage.clear();
+    window.location.reload()
 }
 
 // Skills Progress

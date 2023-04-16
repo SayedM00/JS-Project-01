@@ -127,6 +127,11 @@ ul {list-style-type: none}
 .setting-box .bg-option-box input[type="checkbox"]:checked + div {
     background-color:#0075ff
 }
+.setting-box .reset-button {
+    background-color: #e91e63;
+    margin:10px auto;
+    cursor:pointer
+}
 /* End Setting-box */
 /* Start Nav Bullets */
 .nav-bullets {
