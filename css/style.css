@@ -187,7 +187,7 @@ ul {list-style-type: none}
 }
 .landing-page .head-area {
     z-index: 9;
-    min-height: 66.5px;
+    min-height: 100px;
     width:100%
 }
 .landing-page .head-area .logo{
@@ -205,7 +205,7 @@ ul {list-style-type: none}
 
 }
 .landing-page .head-area .links a{
-    font-size:22px;
+    font-size:19px;
     transition:var(--main-transition)
 }
 .landing-page .head-area .links a:hover{
