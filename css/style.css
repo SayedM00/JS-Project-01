@@ -62,7 +62,6 @@ ul {list-style-type: none}
 .setting-box .gear-p {
     right:-36px;
     top:150px;
-    cursor:pointer;
     border-radius: 0 10px 10px 0;
     background-color:var(--main--color)
 }
@@ -73,7 +72,6 @@ ul {list-style-type: none}
     width:25px;
     height:25px;
     border-radius: 50%;
-    cursor:pointer;
     opacity: .5;
 }
 .setting-box .setting-container .colors li:first-of-type {
@@ -99,7 +97,6 @@ ul {list-style-type: none}
     height:24px;
     background-color: #EEE;
     border-radius:15px;
-    cursor: pointer;
 }
 .setting-box .bg-option-box div::after {
     font-family: var(--fa-style-family-classic);
@@ -130,7 +127,6 @@ ul {list-style-type: none}
 .setting-box .reset-button {
     background-color: #e91e63;
     margin:10px auto;
-    cursor:pointer
 }
 /* End Setting-box */
 /* Start Nav Bullets */
@@ -149,19 +145,14 @@ ul {list-style-type: none}
     border-radius: 50%;
     border:3px solid var(--main--color);
     margin:15px auto;
-    cursor:pointer
 }
 .nav-bullets .bullet:hover .tool-tip {
     display: block;
 }
 .nav-bullets .bullet div {
-    position: absolute;
     right: 31px;
     width: 105px;
     background: var(--main--color);
-    color: white;
-    padding: 5px;
-    text-align: center;
     top: -7px;
     display: none;
     transition:var(--main-transition)
@@ -248,12 +239,6 @@ ul {list-style-type: none}
         font-size:16px
     }
 }
-
-.landing-page .head-area i  {
-    font-size: 25px;
-    cursor: pointer;
-    padding-right: 15px;
-}
 @media (min-width:992px) {
     .landing-page .head-area i  {
         display: none;
@@ -292,7 +277,10 @@ ul {list-style-type: none}
     flex:1.4
 }
 .about-us-page .about-us-image {
-    flex:1
+    flex:1;
+}
+.about-us-page img {
+    width:70%
 }
 /* End About Us Page */
 /* Start Skills */
@@ -347,14 +335,11 @@ ul {list-style-type: none}
 .gallery-section {
     padding: 50px;
 }
-
 .gallery-section .right,
 .gallery-section  .left {
     top:50%;
     transform:translateY(-50%);
     font-size:28px;
-    cursor:pointer;
-    
 }
 .gallery-section  .right {
     right:-45px
@@ -544,15 +529,36 @@ ul {list-style-type: none}
     background-image: url('../imgs/download.png');
     background-size: contain;
     background-repeat: no-repeat;
-    min-height: 800px;
+    min-height: 500px;
     background-position: center;
 }
 .contact-us .overlay {
     content:"";
-    width:100%;
-    height:100%;
     background-color:rgb(255 255 255 / 60%)
 }
+@media (max-width:768px) {
+    .contact-us .container {
+        padding: 0 15px
+    }
+}
+.contact-us form {
+    max-width: 800px;
+    margin:100px auto;
+}
+.contact-us input:not([type="submit"]),
+.contact-us textarea {
+    padding:10px 15px;
+}
+.contact-us input:not([type="submit"]):focus::placeholder,
+.contact-us textarea:focus::placeholder {
+    opacity: 0;
+    transition: var(--main-transition);
+}
+.contact-us textarea {
+    height: 161px;
+}
+.contact-us input[type="submit"] {
+    padding:10px 15px;
+    background-color:var(--main--color);
+}
 /* End Contact Us */
-/* Start Animation */
-/* End Animation */
