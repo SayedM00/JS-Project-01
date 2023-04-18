@@ -555,3 +555,10 @@ ul {list-style-type: none}
     z-index: 999;
     display: none
 }
+@media (max-width:768px) {
+    .scroll-to-top {
+        left:50%;
+        bottom: 80px;
+        margin-left:-20px;
+    }
+}
