@@ -29,24 +29,13 @@ if (localStorage.getItem("color_option") !== null) {
 // Save The Choosen Image
 localStorage.getItem("image_number") != null ? document.getElementById("landing").style.backgroundImage = `url('../imgs/landing-page\ ${localStorage.getItem("image_number")}')` : ""
 
-// Setting Box And Gear
-document.querySelector(".gear-p").onclick = ()=> {
-    document.querySelector(".setting-box").classList.toggle("open");
-    document.querySelector(".gear-c").classList.toggle("fa-spin")
-
-}
-
-// Control Colors
-colors.forEach((ele) => {
-    ele.onclick = function() {
-
-        activeClass(colors, ele)
-        // Change Main Color's Body Style
-        body_style.setProperty("--main--color", this.dataset.color)
-        // Save The Choosen Color in Local Storage
-        localStorage.setItem("color_option", this.dataset.color)
+// Check Background Switch's value
+if (localStorage.getItem("backgroundSwitch") != null) {
+    if (localStorage.getItem("backgroundSwitch") == "true") {
+        bg_checkbox.click();
+        switchBg()
     }
-})
+}
 
 // Links Switch 
 document.querySelector(".bars").addEventListener(("click"), () => {
@@ -60,13 +49,23 @@ links.forEach((ele) => {
     }
 })
 
-// Check Background Switch's value
-if (localStorage.getItem("backgroundSwitch") != null) {
-    if (localStorage.getItem("backgroundSwitch") == "true") {
-        bg_checkbox.click();
-        switchBg()
-    }
+// Setting Box And Gear
+document.querySelector(".gear-p").onclick = ()=> {
+    document.querySelector(".setting-box").classList.toggle("open");
+    document.querySelector(".gear-c").classList.toggle("fa-spin")
 }
+
+// Control Colors
+colors.forEach((ele) => {
+    ele.onclick = function() {
+
+        activeClass(colors, ele)
+        // Change Main Color's Body Style
+        body_style.setProperty("--main--color", this.dataset.color)
+        // Save The Choosen Color in Local Storage
+        localStorage.setItem("color_option", this.dataset.color)
+    }
+})
 
 // Landing Page Switch 
 document.querySelector(".bg-toggle-switch").onclick = function () {
@@ -89,6 +88,12 @@ function switchBg() {
         }, 5000);
     }
 
+// Reset Option 
+document.querySelector(".reset-button").onclick = () => {
+    window.localStorage.clear();
+    window.location.reload()
+}
+
 // Nav Bullents Switch
 if (localStorage.getItem("navSwitch") !== null ||  localStorage.getItem("navSwitch") === null) {
     if (localStorage.getItem("navSwitch") === 'true') {
@@ -110,14 +115,8 @@ document.querySelector(".nav-toggle-switch").onclick = function () {
     }
 }
 
-// Reset Option 
-document.querySelector(".reset-button").onclick = () => {
-    window.localStorage.clear();
-    window.location.reload()
-}
-
 // Skills Progress
-window.onscroll = () => {
+function skillPro() {
     let skillsOfSet = skillsBox.offsetTop;
     let skillsInnerHeight = skillsBox.offsetHeight;
     let windowHeight = this.innerHeight;
@@ -125,7 +124,6 @@ window.onscroll = () => {
     if (windowScroll > (skillsOfSet + skillsInnerHeight - windowHeight)) {
         skills.forEach((span) => {
             span.style.width = span.dataset.progress
-            // console.log(li.getAttribute("data-progress"))
         })
     } else {
         skills.forEach((span) => {
@@ -149,7 +147,6 @@ rightClick.onclick = function () {
         imgs[x].classList.add("gallery-effect")
     }
 } 
-
 leftClick.onclick = function() {
     imgs.forEach((ele) => ele.classList.remove("gallery-effect"))
     if (x === Number(false)) {
@@ -178,6 +175,22 @@ function windowScroll(elements) {
             })
         })
     })
+    
 }
-windowScroll(links)
 windowScroll(navBullets)
+
+window.onscroll = function () {
+    // Skill Progress 
+    skillPro()
+    //Button Scroll To Top
+    if (window.scrollY >= 300) {
+        document.querySelector(".scroll-to-top").style.display = "flex"
+        document.querySelector(".scroll-to-top").onclick = function () {
+            window.scrollTo(0,0)
+        }
+    }else {
+        document.querySelector(".scroll-to-top").style.display = "none"
+    }
+    // Remove Active Class
+    window.scrollY === 0 ? activeClass(links, links[0]) : ""
+}

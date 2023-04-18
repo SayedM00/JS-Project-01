@@ -23,20 +23,22 @@
     <script src="js/app.js" defer></script>
 </head>
 <body>
+    
     <!-- Start Setting-box -->
-    <div class="setting-box bg-white p-fixed">
-        <div class="p-absolute c-white p-10 txt-c gear-p between-flex cursor-p">
+    
+    <div class="setting-box bg-white p-fixed p-10">
+        <div class="p-absolute c-white p-10 txt-c gear-p between-flex cursor-p bg-main">
             <i class="fa-solid fa-gear gear-c "></i>
         </div>
         <div class="setting-container ">
             <div class="color-list center-flex f-wrap bg-eee pb-20 mb-20">
                 <h3 class="mb-10 w-full txt-c  mt-10">Colors</h3>
                 <ul class="colors between-flex p-0 m-0">
-                    <li class= "mr-10 ml-10 active"data-color="#FF9800"></li>
-                    <li class= "mr-10 cursor-p"data-color="#E91E63"></li>
-                    <li class= "mr-10 cursor-p"data-color="#009688"></li>
-                    <li class= "mr-10 cursor-p"data-color="#03A9F4"></li>
-                    <li class= "mr-10 cursor-p"data-color="#4CAF50"></li>
+                    <li class= "mr-10 ml-10 active rad-half"data-color="#FF9800"></li>
+                    <li class= "mr-10 cursor-p rad-half"data-color="#009688"></li>
+                    <li class= "mr-10 cursor-p rad-half"data-color="#03A9F4"></li>
+                    <li class= "mr-10 cursor-p rad-half"data-color="#E91E63"></li>
+                    <li class= "mr-10 cursor-p rad-half"data-color="#4CAF50"></li>
                 </ul>
             </div>
             <div class="bg-option-box center-flex f-wrap pb-20">
@@ -59,46 +61,47 @@
     <!-- End Setting-box -->
     <!-- End Nav Bullets -->
     <div class="nav-bullets">
-    <div class="bullet p-relative cursor-p" data-section=".about-us-page">
-            <div class="tool-tip p-absolute c-white p-5 txt-c">About Us</div>
+    <div class="bullet p-relative cursor-p  rad-half" data-section=".about-us-page">
+            <div class="tool-tip p-absolute c-white p-5 txt-c bg-main">About Us</div>
         </div>
-        <div class="bullet p-relative cursor-p" data-section=".skills-section">
-            <div class="tool-tip p-absolute c-white p-5 txt-c">Our Skills</div>
+        <div class="bullet p-relative cursor-p rad-half" data-section=".skills-section">
+            <div class="tool-tip p-absolute c-white p-5 txt-c bg-main">Our Skills</div>
         </div>
-        <div class="bullet p-relative cursor-p"  data-section=".gallery-section">
-            <div class="tool-tip p-absolute c-white p-5 txt-c">Gallery</div>
+        <div class="bullet p-relative cursor-p rad-half"  data-section=".gallery-section">
+            <div class="tool-tip p-absolute c-white p-5 txt-c bg-main">Gallery</div>
         </div>
-        <div class="bullet p-relative cursor-p" data-section=".time-line">
-            <div class="tool-tip p-absolute c-white p-5 txt-c">Time line</div>
+        <div class="bullet p-relative cursor-p rad-half" data-section=".time-line">
+            <div class="tool-tip p-absolute c-white p-5 txt-c bg-main">Time line</div>
         </div>
-        <div class="bullet p-relative cursor-p" data-section=".features">
-            <div class="tool-tip p-absolute c-white p-5 txt-c">Our Features</div>
+        <div class="bullet p-relative cursor-p rad-half" data-section=".features">
+            <div class="tool-tip p-absolute c-white p-5 txt-c bg-main">Our Features</div>
         </div>
-        <div class="bullet p-relative cursor-p" data-section=".Testimonials">
-            <div class="tool-tip p-absolute c-white p-5 txt-c">Testimonials</div>
+        <div class="bullet p-relative cursor-p rad-half" data-section=".Testimonials">
+            <div class="tool-tip p-absolute c-white p-5 txt-c bg-main">Testimonials</div>
         </div>
-        <div class="bullet p-relative cursor-p" data-section=".contact-us">
-            <div class="tool-tip p-absolute c-white p-5 txt-c">Contact Us</div>
+        <div class="bullet p-relative cursor-p rad-half" data-section=".contact-us">
+            <div class="tool-tip p-absolute c-white p-5 txt-c bg-main">Contact Us</div>
         </div>
     </div>
     <!-- End Nav Bullets -->
     <!-- Start Landing Page -->
     <div class="landing-page p-relative" id="landing">
-        <div class="overlay p-absolute"></div>
+        <div class="overlay p-absolute w-full h-full"></div>
+        <div class="head-area p-relative c-white between-flex p-10 w-full">
+            <div class="logo p-15 fw-bold fs-25"><span class="main-title c-main">JavaScript</span> Template</div>
+            <ul class="links  d-flex">
+                <li><a class="c-white p-10 pl-15 active" href="#about-us-page" data-section=".about-us-page">About</a></li>
+                <li><a class="c-white p-10" href="#skills-section" data-section=".skills-section">Skills</a></li>
+                <li><a class="c-white p-10" href="#gallery-section" data-section=".gallery-section">Gallery</a></li>
+                <li><a class="c-white p-10" href="#time-line" data-section=".time-line">Timeline</a></li>
+                <li><a class="c-white p-10" href="#features" data-section=".features">Features</a></li>
+                <li><a class="c-white p-10" href="#Testimonials" data-section=".Testimonials">Testimonials</a></li>
+                <li><a class="c-white p-10" href="#contact-us" data-section=".contact-us">Contact</a></li>
+            </ul>
+            <i class="fa-solid fa-bars bars cursor-p fs-25 pr-15"></i>
+        </div>
         <div class="container ">
-            <div class="head-area p-relative c-white between-flex p-10">
-                <div class="logo p-15 fw-bold"><span class="main-title c-main">JavaScript</span> Template</div>
-                <ul class="links  d-flex">
-                    <li><a class="c-white p-10 pl-15 active" href="#" data-section=".about-us-page">About</a></li>
-                    <li><a class="c-white p-10" href="#" data-section=".skills-section">Skills</a></li>
-                    <li><a class="c-white p-10" href="#" data-section=".gallery-section">Gallery</a></li>
-                    <li><a class="c-white p-10" href="#" data-section=".time-line">Timeline</a></li>
-                    <li><a class="c-white p-10" href="#" data-section=".features">Features</a></li>
-                    <li><a class="c-white p-10" href="#" data-section=".Testimonials">Testimonials</a></li>
-                    <li><a class="c-white p-10" href="#" data-section=".contact-us">Contact</a></li>
-                </ul>
-                <i class="fa-solid fa-bars bars cursor-p fs-25 pr-15"></i>
-            </div>
+            
             <div class="introduction-text txt-c p-absolute c-white w-fit">
                 <h1 class="m-0 mb-15">We Are A <span class="c-main fw-bold">Travel</span> Agency</h1>
                 <p class="l-height m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet ipsam beatae laboriosam, similique repudiandae minima!</p>
@@ -107,7 +110,7 @@
     </div>
     <!-- End Landing Page -->
     <!-- Start About Us  -->
-    <div class="about-us-page section">
+    <div class="about-us-page section" id="about-us-page">
         <div class="container between-flex pt-20 pb-20">
             <div class="about-us-info txt-c-mobile p-10 txt-c">
                 <h2 class="m-0 mb-20 c-main fs-2em">About Us</h2>
@@ -120,28 +123,28 @@
     </div>
     <!-- End About Us  -->
     <!-- Start Skills -->
-    <div class="skills-section section bg-eee ">
+    <div class="skills-section section bg-eee " id="skills-section">
         <div class="container between-flex txt-c-mobile">
                 <ul class="skills m-0 p-0">
                     <h3 class="mt-0 mb-5">HTML</h3>
-                    <li class=" p-relative mb-10">
-                        <span data-progress="90%"></span>
+                    <li class=" p-relative mb-15 rad-10">
+                        <span class="bg-main h-full p-absolute " data-progress="90%"></span>
                     </li>
                     <h3 class="mt-0 mb-10">CSS</h3>
-                    <li class="p-relative mb-10">
-                        <span data-progress="80%"></span>
+                    <li class="p-relative mb-15 rad-10">
+                        <span class="bg-main h-full p-absolute " data-progress="80%"></span>
                     </li>
                     <h3 class="mt-0 mb-10">Python</h3>
-                    <li class="p-relative mb-10">
-                        <span data-progress="50%"></span>
+                    <li class="p-relative mb-15 rad-10">
+                        <span class="bg-main h-full p-absolute " data-progress="50%"></span>
                     </li>
                     <h3 class="mt-0 mb-10">JavaScript</h3>
-                    <li class="p-relative mb-10">
-                        <span data-progress="60%"></span>
+                    <li class="p-relative mb-15 rad-10">
+                        <span class="bg-main h-full p-absolute " data-progress="60%"></span>
                     </li>
                     <h3 class="mt-0 mb-10">PHP</h3>
-                    <li class="p-relative mb-10">
-                        <span data-progress="10%"></span>
+                    <li class="p-relative mb-15 rad-10">
+                        <span class="bg-main h-full p-absolute " data-progress="10%"></span>
                     </li>
                 </ul>
             <div class="skills-content">
@@ -153,7 +156,7 @@
     </div>
     <!-- End Skills -->
     <!-- Start Gallery -->
-    <div class="gallery-section section d-flex">
+    <div class="gallery-section section d-flex" id="gallery-section">
         <div class="container p-relative">
             <h2 class="m-0 mb-50 c-main fs-2em txt-c">Gallery</h2>
             <i class="fa-solid fa-chevron-right p-absolute right cursor-p"></i>
@@ -178,39 +181,39 @@
     </div>
     <!-- End Gallery -->
     <!-- Start Time Line -->
-    <div class="time-line section">
+    <div class="time-line section bg-eee p-relative" id="time-line">
         <div class="container">
             <h2 class="m-0 mb-20 c-main fs-2em txt-c">Time Line</h2>
-            <div class="time-line-content">
-                <div class="year">2022</div>
-                <div class="left-cover">
-                    <div class="left rad-10">
+            <div class="time-line-content d-flex f-wrap">
+                <div class="year w-fit c-white rad-6 bg-main ">2022</div>
+                <div class="left-cover d-flex w-full mb-50">
+                    <div class="left rad-10 mb-50">
                         <h3 class="m-0 c-main mt-5">Testing Heading</h3>
                         <p class="c-gray l-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum inventore obcaecati rem corrupti, nisi ab, magnam similique fugit at et porro! Adipisci, tempora!</p>
                     </div>
                 </div>
-                <div class="right-cover">
+                <div class="right-cover d-flex w-full mb-50">
                     <div class="right rad-10">
                         <h3 class="m-0 c-main">Testing Heading</h3>
                         <p class="c-gray l-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum inventore obcaecati rem corrupti, nisi ab, magnam similique fugit at et porro! Adipisci, tempora!</p>
                     </div>
                 </div>
-                <div class="year">2021</div>
+                <div class="year w-fit c-white rad-6 bg-main ">2021</div>
                 <div class="left-cover">
-                    <div class="left rad-10">
+                    <div class="left rad-10 mb-50">
                         <h3 class="m-0 c-main mt-5">Testing Heading</h3>
                         <p class="c-gray l-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum inventore obcaecati rem corrupti, nisi ab, magnam similique fugit at et porro! Adipisci, tempora!</p>
                     </div>
                 </div>
                 <div class="left-cover">
-                    <div class="left rad-10">
+                    <div class="left rad-10 mb-50">
                         <h3 class="m-0 c-main">Testing Heading</h3>
                         <p class="c-gray l-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum inventore obcaecati rem corrupti, nisi ab, magnam similique fugit at et porro! Adipisci, tempora!</p>
                     </div>
                 </div>
-                <div class="year">2020</div>
+                <div class="year w-fit c-white rad-6 bg-main ">2020</div>
                 <div class="right-cover">
-                    <div class="right rad-10">
+                    <div class="right rad-10 mb-50">
                         <h3 class="m-0 c-main mt-5">Testing Heading</h3>
                         <p class="c-gray l-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum inventore obcaecati rem corrupti, nisi ab, magnam similique fugit at et porro! Adipisci, tempora!</p>
                     </div>
@@ -220,7 +223,7 @@
     </div>
     <!-- End Time Line -->
     <!-- Start Features -->
-    <div class="features section">
+    <div class="features section" id="features">
         <div class="container txt-c pt-50 pb-50 ">
             <h2 class="mb-35 c-main fs-2em">Our Features</h2>
             <div class="features-content d-grid g-300 gap-20">
@@ -259,7 +262,7 @@
     </div>
     <!-- End Features -->
     <!-- Start Testimonials -->
-    <div class="Testimonials section p-relative pt-50 pb-50">
+    <div class="Testimonials section p-relative pt-50 pb-50" id="Testimonials">
         <div class="container p-relative">
             <h2 class="mb-35 c-white txt-c-mobile fs-2em">Testimonials</h2>
             <div class="testi-content d-grid g-300 gap-20">
@@ -299,7 +302,7 @@
     <!-- End Testimonials -->
 
     <!-- Start Contact Us -->
-    <div class="contact-us section p-relative pb-50">
+    <div class="contact-us section p-relative pb-50" id="contact-us">
         <div class="overlay p-absolute w-full h-full"></div>
         <div class="container p-relative"> 
             <h2 class="mb-50  mt-50 c-main fs-2em txt-c">Contact Us</h2>
@@ -312,9 +315,12 @@
                 </div>
                 <div class="f-1">
                     <textarea name="" placeholder="Type Your Message" class="d-block mb-20 w-full rad-6 border-ccc outline-none"></textarea>
-                    <input type="submit" value="Send" class="w-full border-ccc c-white rad-6 outline-none cursor-p">
+                    <input type="submit" value="Send" class="w-full border-ccc c-white rad-6 outline-none cursor-p bg-main">
                 </div>
             </form>
+        </div>
+        <div class="scroll-to-top center-flex c-white cursor-p bg-main">
+            <i class="fa-solid fa-chevron-up"></i>
         </div>
     </div>
     <!-- End Contact Us -->

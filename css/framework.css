@@ -196,6 +196,9 @@
 .c-orange {
   color: var(--orange-color);
 }
+.bg-main {
+  background-color: var(--main--color);
+}
 .bg-red {
   background-color: var(--red-color);
 }
