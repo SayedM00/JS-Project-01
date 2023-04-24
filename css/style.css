@@ -46,6 +46,14 @@ ul {list-style-type: none}
     opacity: 1 !important;
 }
 /* End Main Rules */
+/* Start Show Rest */
+.show-rest {
+    position:fixed;
+    background-color: var(--main--color);
+    height: 5px;
+    z-index: 99999999;
+}
+/* End Show Rest */
 /* Start Setting-box */
 .setting-box {
     top:0;

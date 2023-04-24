@@ -193,4 +193,6 @@ window.onscroll = function () {
     }
     // Remove Active Class
     window.scrollY === 0 ? activeClass(links, links[0]) : ""
+
+    document.querySelector(".show-rest").style.width = `${(document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100}%`
 }
